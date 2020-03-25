@@ -1,0 +1,11 @@
+INFO 2020-02-22 16:47:10,721 -->quadratic function called takes 3 parameters 1,0,-4
+DEBUG 2020-02-22 16:47:10,725 -->#compute discriminant
+DEBUG 2020-02-22 16:47:10,725 -->#compute the 2 roots
+DEBUG 2020-02-22 16:47:10,725 -->#returning 2 roots
+INFO 2020-02-22 16:47:58,618 -->quadratic function called takes 3 parameters 1,0,-4
+DEBUG 2020-02-22 16:47:58,618 -->#compute discriminant
+DEBUG 2020-02-22 16:47:58,618 -->#compute the 2 roots
+DEBUG 2020-02-22 16:47:58,618 -->#returning 2 roots
+INFO 2020-02-22 16:48:03,685 -->quadratic function called takes 3 parameters 1,0,1
+DEBUG 2020-02-22 16:48:03,686 -->#compute discriminant
+DEBUG 2020-02-22 16:48:03,686 -->#compute the 2 roots
