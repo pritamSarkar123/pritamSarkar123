@@ -7,12 +7,12 @@
 ## About
 
 ################# Loading and Dumping Dictionary in file ############################
-## json.load(file) <<-- loading #dictionary#
-## json.dump(dictObj,file,ensure_ascii=) <<-- writting dictionary in file
+## json.load(file) <<-- loading json and convert it to dictionary from txt/json
+## json.dump(dictObj,file,ensure_ascii=) <<--converting dictionary to json and storing it to file txt/json
 
 ################# jsonObj to dictObj and vice versa ################ ## imp in network and communication
-## json.loads(jsonObj/string) <<-- load and convert it into #dictionary#
-## jsom.dumps(dictObj) <<-- dumping and converting to jsonObj/String
+## json.loads(json string) <<-- concerting json string to dictionary
+## jsom.dumps(dictObj) <<-- converting dictionart to json String
 
 
 
@@ -23,29 +23,31 @@ import json
 ## way one
 with open('json_load.txt','r') as f:
 	data=json.load(f)
-print(data) #op:  {'pritam': 'Sarkar', 'Eshani': 'Jas'}
+print(data,type(data)) #op:  {'pritam': 'Sarkar', 'Eshani': 'Jas'}
 
 #way two
 with open('new_load.json') as f:
 	data=json.load(f)
-print(data) #{'pritam': 'Sarkar', 'Eshani': 'Jas'}
+print(data,type(data)) #{'pritam': 'Sarkar', 'Eshani': 'Jas'}
 
 
 ############ json dump ################
 dictionary={
-	"hello":"world",
-	"fuck":"you"
+	'hello':'world',
+	'fuck':'you'
 }
 with open('json_dump.txt','w') as f:
+	json.dump(dictionary,f,ensure_ascii=False)
+with open('json_dump.json','w') as f:
 	json.dump(dictionary,f,ensure_ascii=False)
 
 
 ############# json dumps ############ use full at the time of server client communication
 person_dict = {'name': 'Bob','age': 12,'children': None,'h':True} ##dictionary format
-person_json = json.dumps(person_dict)
+person_json = json.dumps(person_dict,ensure_ascii=False)
 ### way one
-print(f'person_dict : {person_dict}') #op: {'name': 'Bob', 'age': 12, 'children': None, 'h': True}
-print(f'person_json : {person_json}') #op : {"name": "Bob", "age": 12, "children": null, "h": true}
+print(f'person_dict : {person_dict}',type(person_dict)) #op: {'name': 'Bob', 'age': 12, 'children': None, 'h': True}
+print(f'person_json : {person_json}', type(person_json)) #op : {"name": "Bob", "age": 12, "children": null, "h": true}
 #way two
 with open('json_dumps.txt','w') as f:
 	f.write(person_json)
